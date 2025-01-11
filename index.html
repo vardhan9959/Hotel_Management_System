@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Management System</title>
+    <link rel="stylesheet" href="/static/index.css">
+</head>
+<body>
+    <header>
+        <h1>Hotel Management System</h1>
+    </header>
+
+    <main>
+        <section id="room-management">
+            <h2>Room Management</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Room Name</th>
+                        <th>Room Number</th>
+                        <th>AC Access</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="room-table-body">
+                    <!-- Dynamically populated rows -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="booking-details">
+            <h2>Booking Details</h2>
+            <form id="booking-form">
+                <label for="room-select">Select Room:</label>
+                <select id="room-select" required></select>
+
+                <label for="check-in-date">Check-In Date:</label>
+                <input type="date" id="check-in-date" required>
+
+                <label for="check-in-time">Check-In Time:</label>
+                <input type="time" id="check-in-time" required>
+
+                <label for="check-out-date">Check-Out Date:</label>
+                <input type="date" id="check-out-date" required>
+
+                <label for="check-out-time">Check-Out Time:</label>
+                <input type="time" id="check-out-time" required>
+
+                <button type="submit">Book</button>
+            </form>
+            <div id="booking-message"></div> <!-- Message area -->
+        </section>
+
+        <!-- New Section for Cancelling Bookings -->
+        <section id="cancel-booking">
+            <h2>Cancel Booking</h2>
+            <form id="cancel-form">
+                <label for="cancel-room-select">Select Room to Cancel:</label>
+                <select id="cancel-room-select" required></select>
+
+                <button type="submit">Cancel Booking</button>
+            </form>
+            <div id="cancel-message"></div> <!-- Message area -->
+        </section>
+
+        <section id="user-details">
+            <h2>User Details</h2>
+            <form id="user-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="contact">Contact:</label>
+                <input type="text" id="contact" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <button type="submit">Save User</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="/static/index.js"></script>
+
+</body>
+</html>
